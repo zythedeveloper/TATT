@@ -173,7 +173,7 @@ class TextBase(object):
             'lower': string.digits + string.ascii_lowercase,
             'upper': string.digits + string.ascii_letters,
             'all': string.digits + string.ascii_letters + string.punctuation,
-            'chinese': open("al_chinese.txt", "r").readlines()[0].replace("\n", "")
+            'chinese': open("al_chinese.txt", "r", encoding="utf-8").readlines()[0].replace("\n", "")
         }
         self.test_data_dir = self.args.test_data_dir if self.args.test_data_dir is not None else self.config.TEST.test_data_dir
         self.voc_type = self.config.TRAIN.voc_type

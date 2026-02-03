@@ -3,8 +3,8 @@ MODEL:
 
 TRAIN:
   train_data_dir: [
-    '/data0_ssd2t/majianqi/TextZoom/train1',
-    '/data0_ssd2t/majianqi/TextZoom/train2',
+    'TextZoom/train1',
+    'TextZoom/train2',
     # '/data0_ssd2t/majianqi/cute80_288/',
     # '/data0_ssd2t/majianqi/NIPS2014',
     # '/data1_ssd4t/majianqi/CVPR2016',
@@ -16,7 +16,7 @@ TRAIN:
   epochs: 500
   cuda: True
   ngpu: 1
-  workers: 8
+  workers: 0
   resume: ''
   ckpt_dir: './ckpt/with_test'
   voc_type: 'all' #'digits lower upper all'
@@ -36,9 +36,9 @@ TRAIN:
     val_data_dir: [
       # '/data0_ssd2t/majianqi/cute80_288/'
       #       
-      '/data0_ssd2t/majianqi/TextZoom/test/easy',
-      '/data0_ssd2t/majianqi/TextZoom/test/medium',
-      '/data0_ssd2t/majianqi/TextZoom/test/hard',
+      'TextZoom/test/easy',
+      'TextZoom/test/medium',
+      'TextZoom/test/hard',
       # "/home/data/majianqi/IC15rec_mdb/"
       #'/home/data/majianqi/IC15rec_mdb/',
       #"/data0_ssd2t/majianqi/curve_pick/LR/"
@@ -62,8 +62,8 @@ TRAIN:
     n_vis: 10
     vis_dir: 'demo'
     valInterval: 400 #-1, val at the end of epoch
-    rec_pretrained: 'aster_demo.pth.tar'
-    moran_pretrained: 'moran_demo.pth'
+    rec_pretrained: 'aster.pth'
+    moran_pretrained: 'moran.pth'
     crnn_pretrained: 'crnn.pth'
 
 TEST:

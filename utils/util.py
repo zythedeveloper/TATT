@@ -15,7 +15,7 @@ def str_filt(str_, voc_type):
         'lower': string.digits + string.ascii_lowercase,
         'upper': string.digits + string.ascii_letters,
         'all':   string.digits + string.ascii_letters + string.punctuation,
-        'chinese': open("al_chinese.txt", "r").readlines()[0].replace("\n", "")
+        'chinese': open("al_chinese.txt", "r", encoding="utf-8").readlines()[0].replace("\n", "")
     }
     if voc_type == 'lower':
         str_ = str_.lower()

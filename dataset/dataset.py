@@ -22,7 +22,6 @@ sys.path.append('../')
 from utils import str_filt
 from utils.labelmaps import get_vocabulary, labels2strs
 from IPython import embed
-from pyfasttext import FastText
 random.seed(0)
 
 from utils import utils_deblur
@@ -1657,7 +1656,7 @@ class alignCollate_syn(object):
         self.down_sample_scale = down_sample_scale
         self.mask = mask
         # self.alphabet = "0123456789abcdefghijklmnopqrstuvwxyz"
-        self.alphabet = open("al_chinese.txt", "r").readlines()[0].replace("\n", "")
+        self.alphabet = open("al_chinese.txt", "r", encoding="utf-8").readlines()[0].replace("\n", "")
         self.d2a = "-" + self.alphabet
         self.alsize = len(self.d2a)
         self.a2d = {}
